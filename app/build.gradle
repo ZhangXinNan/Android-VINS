@@ -6,7 +6,7 @@ android {
     defaultConfig {
         applicationId "com.hezhaoxin.solomon.vins_android"
         minSdkVersion 21
-        targetSdkVersion 25
+        targetSdkVersion 26
         versionCode 1
         versionName "1.0"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
@@ -39,7 +39,8 @@ android {
     }
     sourceSets {
         main {
-            jniLibs.srcDirs = ['D:\\workspace\\code\\slam\\VINS-Android\\app\\src\\main\\jniLibs']
+//            jniLibs.srcDirs = ['D:\\workspace\\code\\slam\\VINS-Android\\app\\src\\main\\jniLibs']
+            jniLibs.srcDirs = ['/Users/zhangxin/github/Android-VINS/app/src/main/jniLibs']
         }
     }
     productFlavors {

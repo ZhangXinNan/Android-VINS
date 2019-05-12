@@ -6,7 +6,8 @@
 #set(pathToProject C:\Users\solomon\Desktop\DJLCv-test\DJLCv-test)
 #OpenCV-android-sdk路径
 #set(pathToOpenCv C:/Users/solomon/Desktop/OpenCV-3.1.0-android-sdk/OpenCV-android-sdk)
-set(pathToProject D:/workspace/code/slam/VINS-Android)
+#set(pathToProject D:/workspace/code/slam/VINS-Android)
+set(pathToProject /Users/zhangxin/github/Android-VINS)
 
 #CMake版本信息
 cmake_minimum_required(VERSION 3.4.1)
@@ -113,13 +114,16 @@ add_library(lib-ceres STATIC IMPORTED)
 set_target_properties(lib-ceres PROPERTIES IMPORTED_LOCATION ${CMAKE_SOURCE_DIR}/src/main/jniLibs/${ANDROID_ABI}/libceres.a)
 
 add_library(lib-boost-filesystem STATIC IMPORTED)
-set_target_properties(lib-boost-filesystem PROPERTIES IMPORTED_LOCATION ${CMAKE_SOURCE_DIR}/src/main/jniLibs/${ANDROID_ABI}/libboost_filesystem-gcc-mt-1_49.a)
+#set_target_properties(lib-boost-filesystem PROPERTIES IMPORTED_LOCATION ${CMAKE_SOURCE_DIR}/src/main/jniLibs/${ANDROID_ABI}/libboost_filesystem-gcc-mt-1_49.a)
+set_target_properties(lib-boost-filesystem PROPERTIES IMPORTED_LOCATION ${CMAKE_SOURCE_DIR}/src/main/jniLibs/${ANDROID_ABI}/libboost_filesystem-clang-darwin-mt-a32-1_69.a)
 
 add_library(lib-boost-program-options STATIC IMPORTED)
-set_target_properties(lib-boost-program-options PROPERTIES IMPORTED_LOCATION ${CMAKE_SOURCE_DIR}/src/main/jniLibs/${ANDROID_ABI}/libboost_program_options-gcc-mt-1_49.a)
+#set_target_properties(lib-boost-program-options PROPERTIES IMPORTED_LOCATION ${CMAKE_SOURCE_DIR}/src/main/jniLibs/${ANDROID_ABI}/libboost_program_options-gcc-mt-1_49.a)
+set_target_properties(lib-boost-program-options PROPERTIES IMPORTED_LOCATION ${CMAKE_SOURCE_DIR}/src/main/jniLibs/${ANDROID_ABI}/libboost_program_options-clang-darwin-mt-a32-1_69.a)
 
 add_library(lib-boost-system STATIC IMPORTED)
-set_target_properties(lib-boost-system PROPERTIES IMPORTED_LOCATION ${CMAKE_SOURCE_DIR}/src/main/jniLibs/${ANDROID_ABI}/libboost_system-gcc-mt-1_49.a)
+#set_target_properties(lib-boost-system PROPERTIES IMPORTED_LOCATION ${CMAKE_SOURCE_DIR}/src/main/jniLibs/${ANDROID_ABI}/libboost_system-gcc-mt-1_49.a)
+set_target_properties(lib-boost-system PROPERTIES IMPORTED_LOCATION ${CMAKE_SOURCE_DIR}/src/main/jniLibs/${ANDROID_ABI}/libboost_system-clang-darwin-mt-a32-1_69.a)
 
 #find_package(ceres REQUIRED)
 
